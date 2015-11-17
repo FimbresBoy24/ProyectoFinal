@@ -8,7 +8,9 @@ namespace ProyectoFinal.BD
 {
     public class Proveedor
     {
-        public int id { get; set; }
-        public String Nombre { get; set; }
+        public int idProveedor { get; set; }
+        public String NombreProveedor { get; set; }
+        public String Direccion { get; set; }
+        public String Giro { get; set; }
     }
 }

@@ -7,9 +7,13 @@ using System.Threading.Tasks;
 
 namespace ProyectoFinal.BD
 {
-    public class ProyectoFinal : DbContext
+    public class HelpMeApp : DbContext
     {
         public DbSet<Proveedor> Proveedor { get; set; }
+        public DbSet<Asistente> Asistente { get; set; }
+        public DbSet<CuentaProveedor> CuentaProveedor { get; set; }
+        public DbSet<Servicio> Servicio { get; set; }
+        public DbSet<Factura> Factura { get; set; }
 
     }
 }
