@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace ProyectoFinal.BD
 {
-    public class HelpMeApp : DbContext
+    public class ProyectoFinal : DbContext
     {
         public DbSet<Proveedor> Proveedor { get; set; }
         public DbSet<Asistente> Asistente { get; set; }

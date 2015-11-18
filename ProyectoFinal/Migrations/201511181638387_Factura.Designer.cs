@@ -7,13 +7,13 @@ namespace ProyectoFinal.Migrations
     using System.Resources;
     
     [GeneratedCode("EntityFramework.Migrations", "6.1.3-40302")]
-    public sealed partial class Proveedor : IMigrationMetadata
+    public sealed partial class Factura : IMigrationMetadata
     {
-        private readonly ResourceManager Resources = new ResourceManager(typeof(Proveedor));
+        private readonly ResourceManager Resources = new ResourceManager(typeof(Factura));
         
         string IMigrationMetadata.Id
         {
-            get { return "201511131614231_Proveedor"; }
+            get { return "201511181638387_Factura"; }
         }
         
         string IMigrationMetadata.Source

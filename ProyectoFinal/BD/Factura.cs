@@ -8,8 +8,8 @@ namespace ProyectoFinal.BD
 {
     public class Factura
     {
-        public int IdFactura { get; set; }
-        public virtual int IdProveedor { get; set; }
-        public virtual int IdAsistente { get; set; }
+        public int FacturaId { get; set; }
+        public virtual int AsistenteAsistenteId { get; set; }
+        public virtual int ServicioServicioId { get; set; }
     }
 }

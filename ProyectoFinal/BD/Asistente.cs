@@ -8,7 +8,7 @@ namespace ProyectoFinal.BD
 {
     public class Asistente
     {
-        public int IdAsistente { get; set; }
+        public int AsistenteId { get; set; }
         public String Nombre { get; set; }
         public String Apellido { get; set; }
         public int Telefono { get; set; }
