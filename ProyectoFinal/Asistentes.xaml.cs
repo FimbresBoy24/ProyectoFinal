@@ -35,7 +35,7 @@ namespace ProyectoFinal
 
         private void Button_Click_2(object sender, RoutedEventArgs e)
         {
-            if (Regex.IsMatch(txtnombre.Text, @"^[a-zA-Z]+$") && Regex.IsMatch(txtape.Text, @"^[a-zA-Z]+$") && Regex.IsMatch(txttel.Text, @"^\d+$"))
+            if (Regex.IsMatch(txtnombre.Text, @"^[a-zA-Z\s]+$") && Regex.IsMatch(txtape.Text, @"^[a-zA-Z\s]+$") && Regex.IsMatch(txttel.Text, @"^\d+$"))
             {
                 //ProyectoFinal db = new ProyectoFinal();
                 ProyectoFinal.BD.ProyectoFinal db = new BD.ProyectoFinal();
@@ -51,7 +51,7 @@ namespace ProyectoFinal
 
         private void Button_Click_3(object sender, RoutedEventArgs e)
         {
-            if (Regex.IsMatch(txtnombre.Text, @"^[a-zA-Z]+$") && Regex.IsMatch(txtape.Text, @"^[a-zA-Z]+$") && Regex.IsMatch(txttel.Text, @"^\d+$") && Regex.IsMatch(txtid.Text, @"^\d+$"))
+            if (Regex.IsMatch(txtnombre.Text, @"^[a-zA-Z\s]+$") && Regex.IsMatch(txtape.Text, @"^[a-zA-Z\s]+$") && Regex.IsMatch(txttel.Text, @"^\d+$") && Regex.IsMatch(txtid.Text, @"^\d+$"))
             {
                 ProyectoFinal.BD.ProyectoFinal db = new BD.ProyectoFinal();
                 int id = int.Parse(txtid.Text);
@@ -71,14 +71,10 @@ namespace ProyectoFinal
 
         private void Button_Click_4(object sender, RoutedEventArgs e)
         {
-            if (Regex.IsMatch(txtid.Text, @"^\d+$"))
-            {
                 ProyectoFinal.BD.ProyectoFinal db = new BD.ProyectoFinal();
                 var reg = from s in db.Asistente
                           select s;
                 dbgrid.ItemsSource = reg.ToList();
-            }
-            else { MessageBox.Show("Solo Numeros  #id"); }
         }
 
         private void Button_Click_5(object sender, RoutedEventArgs e)

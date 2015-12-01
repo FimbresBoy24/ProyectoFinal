@@ -14,5 +14,6 @@ namespace ProyectoFinal.BD
 
         public virtual int ProveedorProveedorId { get; set; }
         public virtual ICollection<Factura> Facturas { get; set; }
+        public virtual ICollection<Factura> FacturaList { get; set; }
     }
 }

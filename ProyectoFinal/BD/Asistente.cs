@@ -12,5 +12,7 @@ namespace ProyectoFinal.BD
         public String Nombre { get; set; }
         public String Apellido { get; set; }
         public int Telefono { get; set; }
+
+        public virtual ICollection<Factura> Facturas { get; set; }
     }
 }

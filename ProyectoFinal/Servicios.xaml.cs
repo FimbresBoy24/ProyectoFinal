@@ -36,22 +36,23 @@ namespace ProyectoFinal
 
         private void Button_Click_2(object sender, RoutedEventArgs e)
         {
-            if (Regex.IsMatch(txtnombre.Text, @"^[a-zA-Z]+$") && Regex.IsMatch(txtpre.Text, @"^\d+$"))
+            if (Regex.IsMatch(txtnombre.Text, @"^[a-zA-Z\s]+$") && Regex.IsMatch(txtpre.Text, @"^\d+$") && Regex.IsMatch(CbProveedores.Text, @"^\d+$"))
             {
                 //ProyectoFinal db = new ProyectoFinal();
                 ProyectoFinal.BD.ProyectoFinal db = new BD.ProyectoFinal();
                 Servicio ser = new Servicio();
                 ser.NombreServicio = txtnombre.Text;
                 ser.Precio = float.Parse(txtpre.Text);
+                ser.ProveedorProveedorId = (int)CbProveedores.SelectedValue;
                 db.Servicio.Add(ser);
                 db.SaveChanges();
             }
-            else { MessageBox.Show("Solo Letras en #nombre y numeros en #precio"); }
+            else { MessageBox.Show("Solo Letras en #nombre, numeros en #precio y seleccionar un elemento en #Proveedor"); }
         }
 
         private void Button_Click_3(object sender, RoutedEventArgs e)
         {
-            if (Regex.IsMatch(txtnombre.Text, @"^[a-zA-Z]+$") && Regex.IsMatch(txtpre.Text, @"^\d+$") && Regex.IsMatch(txtid.Text, @"^\d+$"))
+            if (Regex.IsMatch(txtnombre.Text, @"^[a-zA-Z\s]+$") && Regex.IsMatch(txtpre.Text, @"^\d+$") && Regex.IsMatch(txtid.Text, @"^\d+$") && Regex.IsMatch(CbProveedores.Text, @"^\d+$"))
             {
                 ProyectoFinal.BD.ProyectoFinal db = new BD.ProyectoFinal();
                 int id = int.Parse(txtid.Text);
@@ -65,19 +66,15 @@ namespace ProyectoFinal
                     db.SaveChanges();
                 }
             }
-            else { MessageBox.Show("Solo Letras en #nombre y numeros en #precio y #ID"); }
+            else { MessageBox.Show("Solo Letras en #nombre, selecciona algun elemento en #Proveedor y numeros en #precio y #ID"); }
         }
 
         private void Button_Click_4(object sender, RoutedEventArgs e)
-        {
-             if (Regex.IsMatch(txtid.Text, @"^\d+$"))
-                {
+        {   
                     ProyectoFinal.BD.ProyectoFinal db = new BD.ProyectoFinal();
                     var reg = from s in db.Servicio
                         select s;
                         dbgrid.ItemsSource = reg.ToList();
-                }
-                else { MessageBox.Show("Solo Numeros  #id"); }
         }
 
         private void Button_Click_5(object sender, RoutedEventArgs e)
@@ -117,5 +114,24 @@ namespace ProyectoFinal
             }
             else { MessageBox.Show("Solo Numeros  #id"); }
         }
+
+        private void ComboBox_SelectionChanged_1(object sender, SelectionChangedEventArgs e)
+        {
+
         }
-    }
+
+        private void Window_Loaded_1(object sender, RoutedEventArgs e)
+        {
+            ProyectoFinal.BD.ProyectoFinal db = new BD.ProyectoFinal();
+            CbProveedores.ItemsSource = db.Proveedor.ToList();
+            CbProveedores.DisplayMemberPath = "NombreProveedor";
+            CbProveedores.SelectedValuePath = "ProveedorId";
+        }
+
+        private void txtnombre_TextChanged(object sender, TextChangedEventArgs e)
+        {
+
+        }
+        }
+
+        }

@@ -9,7 +9,10 @@ namespace ProyectoFinal.BD
     public class Factura
     {
         public int FacturaId { get; set; }
+        public DateTime Fecha { get; set; }
+        public virtual int ProveedorIdProveedor { get; set; }
         public virtual int AsistenteAsistenteId { get; set; }
         public virtual int ServicioServicioId { get; set; }
+       
     }
 }

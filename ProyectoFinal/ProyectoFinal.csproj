@@ -70,6 +70,18 @@
     <Compile Include="Migrations\201511181638387_Factura.Designer.cs">
       <DependentUpon>201511181638387_Factura.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201512011647073_Fecha.cs" />
+    <Compile Include="Migrations\201512011647073_Fecha.Designer.cs">
+      <DependentUpon>201512011647073_Fecha.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201512012216349_d.cs" />
+    <Compile Include="Migrations\201512012216349_d.Designer.cs">
+      <DependentUpon>201512012216349_d.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201512012313272_f.cs" />
+    <Compile Include="Migrations\201512012313272_f.Designer.cs">
+      <DependentUpon>201512012313272_f.cs</DependentUpon>
+    </Compile>
     <Compile Include="Proveedores.xaml.cs">
       <DependentUpon>Proveedores.xaml</DependentUpon>
     </Compile>
@@ -135,6 +147,15 @@
     </Compile>
     <EmbeddedResource Include="Migrations\201511181638387_Factura.resx">
       <DependentUpon>201511181638387_Factura.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201512011647073_Fecha.resx">
+      <DependentUpon>201512011647073_Fecha.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201512012216349_d.resx">
+      <DependentUpon>201512012216349_d.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201512012313272_f.resx">
+      <DependentUpon>201512012313272_f.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

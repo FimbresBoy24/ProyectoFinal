@@ -69,14 +69,10 @@ namespace ProyectoFinal
 
         private void Button_Click_4(object sender, RoutedEventArgs e)
         {
-            if (Regex.IsMatch(txtid.Text, @"^\d+$"))
-            {
                 ProyectoFinal.BD.ProyectoFinal db = new BD.ProyectoFinal();
                 var reg = from s in db.CuentaProveedor
                           select s;
                 dbgrid.ItemsSource = reg.ToList();
-            }
-            else { MessageBox.Show("Solo Numeros  #id"); }
         }
 
         private void Button_Click_5(object sender, RoutedEventArgs e)
